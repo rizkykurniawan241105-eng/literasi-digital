@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="45%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+
+    <!-- Book Spine & Shadow Gradient -->
+    <linearGradient id="spineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- Page Left Gradient -->
+    <linearGradient id="pageLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="85%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+
+    <!-- Page Right Gradient -->
+    <linearGradient id="pageRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#CBD5E1"/>
+      <stop offset="15%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+
+    <!-- Gold Bookmark Ribbon Gradient -->
+    <linearGradient id="goldRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+
+    <!-- Cyan Glow -->
+    <radialGradient id="glowEffect" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#3B82F6" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#001A41" flood-opacity="0.4"/>
+    </filter>
+    
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Squircle Base for Mobile App / PWA Icon -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Inner Border Glow -->
+  <rect x="4" y="4" width="504" height="504" rx="108" fill="none" stroke="#93C5FD" stroke-width="4" stroke-opacity="0.35"/>
+
+  <!-- Radial Glow Behind the Book -->
+  <circle cx="256" cy="256" r="180" fill="url(#glowEffect)"/>
+
+  <!-- Main Illustration Container with Drop Shadow -->
+  <g filter="url(#dropShadow)">
+    <!-- Book Base / Cover Bottom Spine -->
+    <path d="M120 370 C 180 340, 240 360, 256 372 C 272 360, 332 340, 392 370 L 396 385 C 336 355, 274 374, 256 388 C 238 374, 176 355, 116 385 Z" fill="url(#spineGrad)"/>
+
+    <!-- Left Book Pages -->
+    <path d="M 120 180 C 180 150, 240 170, 256 182 L 256 360 C 240 348, 180 328, 120 358 Z" fill="url(#pageLeft)" filter="url(#softShadow)"/>
+
+    <!-- Right Book Pages -->
+    <path d="M 392 180 C 332 150, 272 170, 256 182 L 256 360 C 272 348, 332 328, 392 358 Z" fill="url(#pageRight)" filter="url(#softShadow)"/>
+
+    <!-- Open Book Spine Line Divider -->
+    <line x1="256" y1="182" x2="256" y2="360" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Text Lines Simulation on Left Page -->
+    <path d="M 148 214 Q 190 196 232 208 M 148 244 Q 190 226 232 238 M 148 274 Q 190 256 232 268 M 148 304 Q 190 286 210 292" stroke="#93C5FD" stroke-width="6" stroke-linecap="round" stroke-opacity="0.85"/>
+
+    <!-- Text Lines Simulation on Right Page -->
+    <path d="M 280 208 Q 322 196 364 214 M 280 238 Q 322 226 364 244 M 280 268 Q 322 256 364 274 M 302 298 Q 333 289 364 304" stroke="#60A5FA" stroke-width="6" stroke-linecap="round" stroke-opacity="0.85"/>
+
+    <!-- Golden Bookmark Ribbon (Flowing down from center top) -->
+    <path d="M 244 140 L 268 140 L 268 230 L 256 218 L 244 230 Z" fill="url(#goldRibbon)" filter="url(#softShadow)"/>
+  </g>
+
+  <!-- Digital Sparkles & Literacy Elements Floating -->
+  <!-- Top Center Sparkle -->
+  <path d="M 256 90 L 263 108 L 281 115 L 263 122 L 256 140 L 249 122 L 231 115 L 249 108 Z" fill="#FDE047"/>
+  
+  <!-- Left Small Star -->
+  <path d="M 130 130 L 134 140 L 144 144 L 134 148 L 130 158 L 126 148 L 116 144 L 126 140 Z" fill="#BAE6FD"/>
+
+  <!-- Right Small Star -->
+  <path d="M 380 120 L 384 132 L 396 136 L 384 140 L 380 152 L 376 140 L 364 136 L 376 132 Z" fill="#FDE047"/>
+
+  <!-- Modern Digital Signal / Growth Arcs -->
+  <circle cx="390" cy="370" r="10" fill="#38BDF8" opacity="0.9"/>
+  <circle cx="120" cy="370" r="10" fill="#38BDF8" opacity="0.9"/>
+</svg>

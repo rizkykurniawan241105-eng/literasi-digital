@@ -1,0 +1,79 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /books/{bookId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /reports/{reportId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /reading_reports/{reportId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /settings/{document} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /app_settings/{document} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /pengaturan_aplikasi/{document} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /admin_whitelists/{document} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /admin_whitelist/{document} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /school_settings/{document} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /school_classes/{document} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /attendance_config/{document} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /attendance_settings/{document} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}

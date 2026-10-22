@@ -1,0 +1,6 @@
+{
+  "name": "Literasi Digital Sekolah SMA NEGERI 1 SALEM",
+  "description": "Platform Portal Literasi Digital Resmi SMA Negeri 1 Salem untuk Siswa, Guru, dan Admin Perpustakaan Digital.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

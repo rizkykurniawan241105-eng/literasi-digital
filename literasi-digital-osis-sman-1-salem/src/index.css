@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --md-sys-color-primary: #005AC1;
+    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-primary-container: #D8E2FF;
+    --md-sys-color-on-primary-container: #001A41;
+    --md-sys-color-secondary: #006399;
+    --md-sys-color-secondary-container: #C2E8FF;
+    --md-sys-color-surface: #F8FAFF;
+    --md-sys-color-surface-container: #EEF3FF;
+    --md-sys-color-surface-container-high: #E2E8F8;
+    --md-sys-color-surface-container-lowest: #FFFFFF;
+    --md-sys-color-outline: #74777F;
+  }
+
+  body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #F8FAFF;
+    color: #191C20;
+  }
+}
+
+/* Education & Science Vector Pattern Background - Sky Theme / Soft Blue Theme */
+.edu-pattern-bg {
+  background-color: #F8FAFC;
+  background-image: 
+    linear-gradient(to bottom, rgba(248, 250, 252, 0.72), rgba(240, 249, 255, 0.80)),
+    url('/education_pattern_bg.jpg');
+  background-repeat: repeat;
+  background-size: 320px auto;
+  background-attachment: fixed;
+}
+
+/* Material Design 3 Utility Classes */
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.m3-card-filled {
+  background-color: #EEF3FF;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 90, 193, 0.08);
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.m3-card-elevated {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.08), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  border: 1px solid #E2E8F8;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.m3-card-elevated:hover {
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.12), 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
+}
+
+.m3-card-outlined {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #C4C6CF;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.m3-btn-filled {
+  background-color: #005AC1;
+  color: #FFFFFF;
+  border-radius: 100px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.m3-btn-filled:hover {
+  background-color: #00479A;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.12);
+}
+
+.m3-btn-tonal {
+  background-color: #D8E2FF;
+  color: #001A41;
+  border-radius: 100px;
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.m3-btn-tonal:hover {
+  background-color: #C2D3FF;
+}
+
+.m3-btn-outlined {
+  border: 1px solid #74777F;
+  color: #005AC1;
+  border-radius: 100px;
+  font-weight: 500;
+  background: transparent;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.m3-btn-outlined:hover {
+  background-color: rgba(0, 90, 193, 0.08);
+}
+
+.m3-input-outlined {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid #74777F;
+  padding: 10px 16px;
+  transition: all 0.2s ease;
+}
+
+.m3-input-outlined:focus {
+  border-color: #005AC1;
+  border-width: 2px;
+  outline: none;
+}
+
+.m3-dialog {
+  border-radius: 28px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 6px 12px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Print Stylesheet for Official School Reports */
+.print-only {
+  display: none !important;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 10mm 12mm 12mm 12mm;
+}
+
+@media print {
+  html, body, #root, .flex.h-screen, main, .overflow-y-auto, .print-container {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 8.5pt !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: static !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide navigation, headers, sidebars, buttons, controls, charts, drawers, modals, toasts */
+  header, nav, aside, sidebar, footer, .no-print, button, input, select, svg, [role="dialog"], .recharts-wrapper {
+    display: none !important;
+  }
+
+  /* Display official print elements */
+  .print-only {
+    display: block !important;
+  }
+
+  .print-flex {
+    display: flex !important;
+  }
+
+  /* Clean up page container */
+  .print-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  /* Printable Table Formatting */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 7.5pt !important;
+    margin-top: 8px !important;
+    margin-bottom: 12px !important;
+  }
+
+  th, td {
+    border: 1px solid #000000 !important;
+    padding: 4px 5px !important;
+    text-align: left !important;
+    color: #000000 !important;
+    vertical-align: top !important;
+    word-break: break-word !important;
+  }
+
+  th {
+    background-color: #f1f5f9 !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    font-size: 7.5pt !important;
+  }
+
+  tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .line-clamp-2 {
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+    overflow: visible !important;
+  }
+
+  /* Signature Block Page Break Rules */
+  .signature-section {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin-top: 25px !important;
+    display: block !important;
+  }
+}
+

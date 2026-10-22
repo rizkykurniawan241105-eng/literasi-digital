@@ -1,0 +1,22 @@
+{
+  "name": "LITERASI SMA NEGERI 1 SALEM",
+  "short_name": "LITERASI SMA 1",
+  "description": "Platform Portal Literasi Digital Resmi SMA Negeri 1 Salem",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "48x48",
+      "type": "image/svg+xml"
+    }
+  ]
+}

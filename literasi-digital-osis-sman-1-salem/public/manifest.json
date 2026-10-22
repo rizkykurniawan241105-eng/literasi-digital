@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "LITERASI DIGITAL OSIS SMA NEGERI 1 SALEM",
+  "short_name": "LITERAL OSIS",
+  "description": "Platform Portal Literasi Digital Resmi OSIS SMA Negeri 1 Salem untuk membaca e-book dan mencatat laporan literasi.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "48x48",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
